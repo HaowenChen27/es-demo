@@ -21,8 +21,11 @@ dependencies {
     compile(
             'org.springframework.boot:spring-boot-starter-data-elasticsearch',
             'io.searchbox:jest:5.3.3',
-            'net.java.dev.jna:jna:4.5.1',
+            'net.java.dev.jna:jna:4.5.1'
     )
+    compile('com.101tec:zkclient:0.10') {
+        exclude group:'org.slf4j'
+    }
 }
 
 test {
